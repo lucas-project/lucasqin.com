@@ -6,30 +6,94 @@ export default function CertificationsSection() {
   const sectionRef = useRef(null);
   const certifications = [
     {
-      title: "AWS Certified Solutions Architect – Associate",
+      title: "IT Professional Year Certificate",
+      issuer: "Monash College",
+      date: "Issued: Aug 2025",
+      icon: "🎓",
+      link: "#"
+    },
+    {
+      title: "AWS DevOps Best Practices for Beginner",
+      issuer: "LinkedIn",
+      date: "Issued: Sep 2024",
+      icon: "🎓",
+      link: "#"
+    },
+
+    {
+      title: "Cert Prep: Saleforce Certified Administrator",
+      issuer: "LinkedIn",
+      date: "Issued: Sep 2024",
+      icon: "🎓",
+      link: "#"
+    },
+    {
+      title: "AWS Certified Cloud Practitioner",
       issuer: "Amazon Web Services",
-      date: "Issued: Jan 2023",
+      date: "Issued: Dec 2022",
       icon: "🎓",
       link: "#"
     },
     {
-      title: "Certified Kubernetes Administrator (CKA)",
-      issuer: "The Linux Foundation",
-      date: "Issued: Jun 2022",
+      title: "IBM Backend Developer Professional Certificate",
+      issuer: "Coursera",
+      date: "Issued: Jun 2023",
       icon: "🎓",
       link: "#"
     },
     {
-      title: "Google Professional Cloud Developer",
-      issuer: "Google Cloud",
-      date: "Issued: Mar 2022",
+      title: "IBM DevOps and Software Engineering Professional Certificate",
+      issuer: "Coursera",
+      date: "Issued: JuL 2023",
       icon: "🎓",
       link: "#"
     },
     {
-      title: "Microsoft Certified: Azure Developer Associate",
-      issuer: "Microsoft",
-      date: "Issued: Dec 2021",
+      title: "TypeScript Design Patterns",
+      issuer: "LinkedIn",
+      date: "Issued: Sep 2024",
+      icon: "🎓",
+      link: "#"
+    },
+    {
+      title: "DevOps Foundations",
+      issuer: "LinkedIn",
+      date: "Issued: Sep 2024",
+      icon: "🎓",
+      link: "#"
+    },
+    {
+      title: "Confluence Fundamentals",
+      issuer: "Atlassian",
+      date: "Issued: Mar 2023",
+      icon: "🎓",
+      link: "#"
+    },
+    {
+      title: "Jira Fundamentals",
+      issuer: "Atlassian",
+      date: "Issued: Mar 2023",
+      icon: "🎓",
+      link: "#"
+    },
+    {
+      title: "Diploma of Project Management",
+      issuer: "Melbourne College of Business and Technology",
+      date: "Issued: Nov 2018",
+      icon: "🎓",
+      link: "#"
+    },
+    {
+      title: "Master of Information Technology",
+      issuer: "Swinburne University of Technology",
+      date: "Issued: Jul 2023",
+      icon: "🎓",
+      link: "#"
+    },
+    {
+      title: "Work with Children Check",
+      issuer: "Service Victoria",
+      date: "Issued: Jan 2021",
       icon: "🎓",
       link: "#"
     }
@@ -47,7 +111,7 @@ export default function CertificationsSection() {
   const certificationsToShow = isExpanded ? certifications : certifications.slice(0, 2);
 
   return (
-    <section ref={sectionRef} id="certifications" className="bg-slate-50 py-20 scroll-mt-16">
+    <section ref={sectionRef} id="certifications" className="bg-white py-20 scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -67,7 +131,7 @@ export default function CertificationsSection() {
               href={cert.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border hover:border-blue-500 animate-fade-in"
+              className="group block bg-slate-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border hover:border-blue-500 animate-fade-in"
             >
               <div className="flex items-start">
                 <div className="text-3xl mr-4 mt-1">{cert.icon}</div>

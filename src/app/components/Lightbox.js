@@ -69,13 +69,14 @@ export default function Lightbox({ images, startIndex, onClose }) {
         onTouchEnd={onTouchEndHandler}
       >
         <img
-          src={images[currentIndex]}
-          alt={`Project image ${currentIndex + 1} of ${images.length}`}
+          src={images[currentIndex].src}
+          alt={images[currentIndex].description || `Project image ${currentIndex + 1}`}
           className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
         />
 
-        <div className="absolute -bottom-8 text-white text-lg">
-          {currentIndex + 1} / {images.length}
+        <div className="absolute -bottom-12 text-center text-white text-lg w-full px-4">
+          <p>{images[currentIndex].description}</p>
+          <p className="text-sm text-gray-400 mt-1">{currentIndex + 1} / {images.length}</p>
         </div>
       </div>
 

@@ -60,7 +60,7 @@ export default function FeaturesSection() {
   const featuresToShow = isExpanded ? allFeatures : allFeatures.slice(0, 6);
 
   return (
-    <section ref={sectionRef} className="bg-slate-50 py-20 scroll-mt-16">
+    <section ref={sectionRef} className="bg-white py-20 scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -78,7 +78,7 @@ export default function FeaturesSection() {
           {featuresToShow.map((feature, index) => (
             <div 
               key={index}
-              className="group p-6 bg-white rounded-xl hover:shadow-lg transition-all duration-300 border hover:border-blue-200 animate-fade-in"
+              className="group p-6 bg-slate-50 rounded-xl hover:shadow-lg transition-all duration-300 border hover:border-blue-200 animate-fade-in"
             >
               <div className="text-4xl mb-4">{feature.icon}</div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
