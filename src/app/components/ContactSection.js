@@ -1,6 +1,6 @@
 export default function ContactSection() {
   return (
-    <section id="contact" className="bg-gray-100 py-20">
+    <section id="contact" className="bg-white py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left Content */}

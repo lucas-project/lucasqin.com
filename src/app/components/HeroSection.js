@@ -1,6 +1,6 @@
 export default function HeroSection() {
   return (
-    <section id="home" className="bg-gray-50 pt-16 min-h-screen flex items-center">
+    <section id="home" className="bg-white pt-16 min-h-screen flex items-center">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}

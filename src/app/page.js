@@ -1,9 +1,9 @@
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
-import DarkSection from './components/DarkSection';
+import ExperienceSection from './components/ExperienceSection';
 import FeaturesSection from './components/FeaturesSection';
 import ProjectsSection from './components/ProjectsSection';
-import StatsSection from './components/StatsSection';
+import CertificationsSection from './components/CertificationsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 
@@ -12,10 +12,10 @@ export default function Home() {
     <div className="min-h-screen">
       <Header />
       <HeroSection />
-      <DarkSection />
+      <ExperienceSection />
       <FeaturesSection />
       <ProjectsSection />
-      <StatsSection />
+      <CertificationsSection />
       <ContactSection />
       <Footer />
     </div>
