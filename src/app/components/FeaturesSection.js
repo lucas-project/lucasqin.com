@@ -8,42 +8,50 @@ export default function FeaturesSection() {
     {
       title: "Programming Languages",
       description: "Experienced in Java, JavaScript, Python, and PHP, demonstrated through academic projects, internships, and personal endeavours in developing web applications",
-      icon: "🎨"
+      icon: "🎨",
+      keywords: ["Java", "JavaScript", "Python", "PHP"]
     },
     {
       title: "Database Management", 
       description: "Proficient in MySQL, Firebase and MongoDB for designing and managing databases for websites and software, gained through academic and internship projects",
-      icon: "💻"
+      icon: "💻",
+      keywords: ["MySQL", "Firebase", "MongoDB", "Database Design"]
     },
     {
       title: "Cloud Services",
       description: "Familiarity with AWS services, such as EC2, S3, and IAM, developed through the AWS Certified Cloud Practitioner certification",
-      icon: "📱"
+      icon: "📱",
+      keywords: ["AWS", "EC2", "S3", "IAM", "Cloud Computing"]
     },
     {
       title: "Version Control",
       description: "Competent in Git, GitHub, SVN and Bitbucket for version control and collaboration, gained through academic and personal projects",
-      icon: "✨"
+      icon: "✨",
+      keywords: ["Git", "GitHub", "SVN", "Bitbucket"]
     },
     {
       title: "Development Tools",
       description: "Competent in using development tools such Slack, Figma, Visual Studio Code, IntelliJ IDEA, and Postman, as well as AI development tools like ChatGPT and Cursor, ensuring efficient code management and effective API testing in software development projects",
-      icon: "🔍"
+      icon: "🔍",
+      keywords: ["Figma", "VS Code", "IntelliJ", "Postman", "ChatGPT", "Cursor"]
     },
     {
       title: "Technologies",
       description: "Familiar with technologies such as React, Node.js, Express, and MongoDB, as well as frameworks such as Bootstrap, Tailwind CSS, and Material UI, ensuring efficient web development and responsive design in software development projects",
-      icon: "⚡"
+      icon: "⚡",
+      keywords: ["React", "Node.js", "Express", "Bootstrap", "Tailwind CSS"]
     },
     {
       title: "Cloud Architecture",
       description: "Familiar with cloud architecture, including AWS, Google Cloud, and Azure, as well as cloud services such as EC2, S3, and IAM, ensuring efficient cloud infrastructure and scalable cloud services in software development projects",
-      icon: "☁️"
+      icon: "☁️",
+      keywords: ["AWS", "Google Cloud", "Azure", "EC2", "S3", "IAM"]
     },
     {
       title: "API Development",
       description: "Experienced in developing RESTful APIs using Node.js, Express, and MongoDB, as well as GraphQL APIs using Apollo Server and GraphQL Yoga, ensuring efficient API development and effective API testing in software development projects",
-      icon: "🔗"
+      icon: "🔗",
+      keywords: ["RESTful API", "GraphQL", "Node.js", "Express", "Apollo"]
     }
     
   ];
@@ -87,6 +95,15 @@ export default function FeaturesSection() {
               <p className="text-gray-600 leading-relaxed">
                 {feature.description}
               </p>
+              <div className="max-h-0 opacity-0 group-hover:max-h-96 group-hover:opacity-100 transition-all duration-500 ease-in-out overflow-hidden">
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {feature.keywords.map((keyword, i) => (
+                    <span key={i} className="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-semibold rounded-full">
+                      {keyword}
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           ))}
         </div>

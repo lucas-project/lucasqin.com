@@ -5,60 +5,75 @@ import { useState } from 'react';
 export default function ExperienceSection() {
   const experiences = [
     {
-      company: "Scouts Victoria - Mount Waverley, VIC",
+      company: "Scouts Victoria",
+      location: "Mount Waverley, VIC",
       role: "Junior Full Stack Developer Intern",
       duration: "APR 2025 – CURRENT",
-      brief: "Driving digital transformation by engineering and maintaining full-stack web applications from concept to deployment.",
-      responsibilities: [
-        "Ensured robust performance and reliability through meticulous code reviews.",
-        "Delivered a seamless user experience through strategic bug fixes and comprehensive testing.",
-        "Collaborated with the team to ship new features in an agile environment."
-      ],
-      technologies: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS", "Jest"],
-      icon: "⚜️"
+      description: "Driving digital transformation by engineering and maintaining full-stack web applications from concept to deployment. I ensure robust performance and reliability through meticulous code reviews, strategic bug fixes, and comprehensive testing, delivering a seamless user experience.",
+      logo: "/logos/scoutsVictoria.png"
     },
     {
-      company: "La Trobe University (Centre of Technology Infusion) - Bundoora, VIC",
+      company: "La Trobe University",
+      location: "Bundoora, VIC",
       role: "Information Technology Intern",
       duration: "JAN 2025 – APR 2025",
-      brief: "Pioneered a safety-critical Android application for the Queensland Department of Transport & Main Roads, processing real-time motorcycle data to deliver life-saving warnings.",
-      responsibilities: [
-        "Played a key role in hardware integration and real-time data monitoring.",
-        "Collaborated with a cross-functional team to ensure project success.",
-        "Contributed to the development of life-saving warning systems for motorcyclists."
-      ],
-      technologies: ["Android", "Java", "Python", "Bluetooth", "Sensor API", "Firebase"],
-      icon: "🏍️"
+      description: "Pioneered a safety-critical Android application for the Queensland Department of Transport & Main Roads, processing real-time motorcycle data to deliver life-saving warnings. Played a key role in hardware integration, data monitoring, and cross-functional team collaboration to ensure project success.",
+      logo: "/logos/LaTrobe.png"
     },
     {
-      company: "MarkMyWords - Richmond, VIC",
+      company: "MarkMyWords",
+      location: "Richmond, VIC",
       role: "Software Development Intern",
       duration: "NOV 2022 – FEB 2023",
-      brief: "Revitalized a student performance visualization tool using React.js and Chart.js to create engaging data narratives.",
-      responsibilities: [
-        "Spearheaded the design and development of a new MERN stack landing page.",
-        "Integrated Stripe for payment processing.",
-        "Enhanced application performance by optimizing code through collaborative GitHub reviews."
-      ],
-      technologies: ["React.js", "Chart.js", "MERN", "Stripe API", "Figma", "GitHub"],
-      icon: "📊"
+      description: "Revitalized a student performance visualization tool using React.js and Chart.js to create engaging data narratives. I spearheaded the design and development of a new MERN stack landing page with Stripe integration and enhanced application performance by optimizing code through collaborative GitHub reviews.",
+      logo: "/logos/MMW.jpg"
     },
     {
-      company: "ITConnexion - Hawthorn, VIC",
+      company: "ITConnexion",
+      location: "Hawthorn, VIC",
       role: "Software Development Intern",
       duration: "AUG 2022 – OCT 2022",
-      brief: "Transformed client needs into tangible digital solutions, leading user requirement analysis and prototyping in Figma.",
-      responsibilities: [
-          "Drove the completion of a youth mental health Android app by implementing critical features.",
-          "Managed database integration for the application.",
-          "Brought the project from concept to 50% completion."
-      ],
-      technologies: ["Android", "Java", "Figma", "SQL", "Requirements Analysis"],
-      icon: "📱"
+      description: "Transformed client needs into tangible digital solutions, leading user requirement analysis and prototyping in Figma. I drove the completion of a youth mental health Android app by implementing critical features and database integration, bringing the project to 50% completion.",
+      logo: "/logos/ITConnexion.png"
     }
   ];
 
+  const otherExperiences = [
+    {
+      company: "Bio-E Australia",
+      role: "Mechanical Engineer",
+      years: "2017-2021",
+      logo: "/logos/bioe.jpg"
+    },
+    {
+      company: "Uber",
+      role: "Uber Eat Driver",
+      years: "2021-2023",
+      logo: "/logos/uber.jpg"
+    },
+    {
+      company: "Boroondara City Council",
+      role: "School Crossing Supervisor",
+      years: "2022-2023",
+      logo: "/logos/boroondara.png"
+    },
+    {
+      company: "Expoconti",
+      role: "Metro Tunnel Project Technician",
+      years: "2024-2025",
+      logo: "/logos/expoconti.jpg"
+    },
+    {
+      company: "MDHOME-Midea",
+      role: "Warehouse Manager",
+      years: "2024-2025",
+      logo: "/logos/midea.png"
+    }
+    
+  ];
+
   const [expandedIndex, setExpandedIndex] = useState(0); // First item expanded by default
+  const [isOtherExperienceExpanded, setIsOtherExperienceExpanded] = useState(false);
 
   const handleToggle = (index) => {
     setExpandedIndex(expandedIndex === index ? null : index);
@@ -80,17 +95,16 @@ export default function ExperienceSection() {
         {/* Experience Grid */}
         <div className="grid md:grid-cols-2 gap-8 md:items-start">
           {experiences.map((exp, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden transition-all duration-500 ease-in-out hover:shadow-2xl">
+            <div key={index} className="bg-white rounded-xl shadow-lg border border-gray-200 overflow-hidden transition-all duration-300 hover:border-blue-500">
               <button
                 onClick={() => handleToggle(index)}
-                className="w-full text-left p-6 flex justify-between items-start focus:outline-none"
+                className="w-full text-left p-6 flex justify-between items-center focus:outline-none"
               >
-                <div className="flex items-start">
-                  <div className="text-4xl mr-5 mt-1">{exp.icon}</div>
+                <div className="flex items-center">
+                  <img src={exp.logo} alt={`${exp.company} logo`} className="w-12 h-12 mr-4 object-contain"/>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900">{exp.role}</h3>
-                    <p className="text-blue-600 font-semibold">{exp.company}</p>
-                    <p className="text-sm text-gray-500 mt-1">{exp.duration}</p>
+                    <p className="text-blue-600">{exp.company}</p>
                   </div>
                 </div>
                 <span className={`transform transition-transform duration-300 ${expandedIndex === index ? 'rotate-180' : ''}`}>
@@ -99,28 +113,52 @@ export default function ExperienceSection() {
                   </svg>
                 </span>
               </button>
-              
-              <div className={`px-6 pb-2 transition-all duration-500 ease-in-out ${expandedIndex === index ? 'max-h-[1000px] opacity-100 pb-6' : 'max-h-0 opacity-0'}`}>
-                <div className="border-t border-gray-200 pt-4">
-                    <p className="text-gray-700 leading-relaxed mb-6">{exp.brief}</p>
-                    
-                    <h4 className="font-bold text-gray-800 mb-3 text-lg">Key Responsibilities</h4>
-                    <ul className="space-y-2 list-disc list-inside text-gray-600 mb-6">
-                        {exp.responsibilities.map((resp, i) => (
-                            <li key={i}>{resp}</li>
-                        ))}
-                    </ul>
-
-                    <h4 className="font-bold text-gray-800 mb-3 text-lg">Technologies Used</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {exp.technologies.map((tech, i) => (
-                        <span key={i} className="px-3 py-1 bg-blue-100 text-blue-800 text-sm rounded-full font-medium">{tech}</span>
-                      ))}
-                    </div>
+              <div
+                className={`transition-all duration-500 ease-in-out ${expandedIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
+              >
+                <div className="p-6 pt-0">
+                  <div className="border-t border-gray-200 pt-4">
+                    <p className="font-semibold text-gray-700 mb-2">{exp.duration}</p>
+                    <p className="text-gray-600 leading-relaxed">
+                      {exp.description}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Other Experience Section */}
+        <div className="mt-20">
+          <div className="text-center">
+            <button 
+              onClick={() => setIsOtherExperienceExpanded(!isOtherExperienceExpanded)}
+              className="inline-flex items-center justify-center"
+            >
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900">Other Experience</h3>
+              <span className={`transform transition-transform duration-300 ml-2 ${isOtherExperienceExpanded ? 'rotate-180' : ''}`}>
+                <svg className="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </button>
+          </div>
+
+          <div className={`transition-all duration-500 ease-in-out overflow-hidden ${isOtherExperienceExpanded ? 'max-h-screen mt-12 pt-4' : 'max-h-0'}`}>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8">
+                {otherExperiences.map((exp, index) => (
+                    <div key={index} className="text-center flex flex-col items-center">
+                        <div className="w-16 h-16 mb-4">
+                          <img src={exp.logo} alt={`${exp.company} logo`} className="w-full h-full rounded-full object-cover shadow-md transition-all duration-300 ease-in-out hover:scale-125 hover:shadow-xl"/>
+                        </div>
+                        <h4 className="text-lg font-semibold text-gray-800">{exp.company}</h4>
+                        <p className="text-gray-600 text-center px-2">{exp.role}</p>
+                        <p className="text-sm text-gray-500">{exp.years}</p>
+                    </div>
+                ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

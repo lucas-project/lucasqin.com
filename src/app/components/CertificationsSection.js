@@ -8,95 +8,101 @@ export default function CertificationsSection() {
     {
       title: "IT Professional Year Certificate",
       issuer: "Monash College",
-      date: "Issued: Aug 2025",
-      icon: "🎓",
+      date: "Aug 2025",
+      logo: "/logos/monash college.png",
       link: "#"
     },
     {
       title: "AWS DevOps Best Practices for Beginner",
       issuer: "LinkedIn",
-      date: "Issued: Sep 2024",
-      icon: "🎓",
+      date: "Sep 2024",
+      logo: "/logos/linkedin.png",
       link: "#"
     },
-
     {
       title: "Cert Prep: Saleforce Certified Administrator",
       issuer: "LinkedIn",
-      date: "Issued: Sep 2024",
-      icon: "🎓",
+      date: "Sep 2024",
+      logo: "/logos/linkedin.png",
       link: "#"
     },
     {
       title: "AWS Certified Cloud Practitioner",
       issuer: "Amazon Web Services",
-      date: "Issued: Dec 2022",
-      icon: "🎓",
+      date: "Dec 2022",
+      logo: "/logos/aws.png",
       link: "#"
     },
     {
       title: "IBM Backend Developer Professional Certificate",
       issuer: "Coursera",
-      date: "Issued: Jun 2023",
-      icon: "🎓",
+      date: "Jun 2023",
+      logo: "/logos/coursera.jpg",
       link: "#"
     },
     {
       title: "IBM DevOps and Software Engineering Professional Certificate",
       issuer: "Coursera",
-      date: "Issued: JuL 2023",
-      icon: "🎓",
+      date: "JuL 2023",
+      logo: "/logos/coursera.jpg",
       link: "#"
     },
     {
       title: "TypeScript Design Patterns",
       issuer: "LinkedIn",
-      date: "Issued: Sep 2024",
-      icon: "🎓",
+      date: "Sep 2024",
+      logo: "/logos/linkedin.png",
       link: "#"
     },
     {
       title: "DevOps Foundations",
       issuer: "LinkedIn",
-      date: "Issued: Sep 2024",
-      icon: "🎓",
+      date: "Sep 2024",
+      logo: "/logos/linkedin.png",
       link: "#"
     },
     {
       title: "Confluence Fundamentals",
       issuer: "Atlassian",
-      date: "Issued: Mar 2023",
-      icon: "🎓",
+      date: "Mar 2023",
+      logo: "/logos/atlassian.png",
       link: "#"
     },
     {
       title: "Jira Fundamentals",
       issuer: "Atlassian",
-      date: "Issued: Mar 2023",
-      icon: "🎓",
+      date: "Mar 2023",
+      logo: "/logos/atlassian.png",
       link: "#"
     },
     {
       title: "Diploma of Project Management",
       issuer: "Melbourne College of Business and Technology",
-      date: "Issued: Nov 2018",
-      icon: "🎓",
+      date: "Nov 2018",
+      logo: "/logos/MCBT.jpg",
       link: "#"
     },
     {
       title: "Master of Information Technology",
       issuer: "Swinburne University of Technology",
-      date: "Issued: Jul 2023",
-      icon: "🎓",
+      date: "Jul 2023",
+      logo: "/logos/swinburne.png",
       link: "#"
     },
     {
       title: "Work with Children Check",
       issuer: "Service Victoria",
-      date: "Issued: Jan 2021",
-      icon: "🎓",
+      date: "Jan 2021",
+      logo: "/logos/sv.png",
       link: "#"
-    }
+    },
+    {
+      title: "Australian Open Driver's License",
+      issuer: "VicRoads",
+      date: "Mar 2021",
+      logo: "/logos/vicroad.png",
+      link: "#"
+    },
   ];
 
   const [isExpanded, setIsExpanded] = useState(false);
@@ -108,7 +114,7 @@ export default function CertificationsSection() {
     setIsExpanded(!isExpanded);
   };
 
-  const certificationsToShow = isExpanded ? certifications : certifications.slice(0, 2);
+  const certificationsToShow = isExpanded ? certifications : certifications.slice(0, 6);
 
   return (
     <section ref={sectionRef} id="certifications" className="bg-white py-20 scroll-mt-16">
@@ -123,38 +129,41 @@ export default function CertificationsSection() {
           </p>
         </div>
 
-        {/* Certifications Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {certificationsToShow.map((cert, index) => (
-            <a
-              key={index}
-              href={cert.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block bg-slate-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border hover:border-blue-500 animate-fade-in"
-            >
-              <div className="flex items-start">
-                <div className="text-3xl mr-4 mt-1">{cert.icon}</div>
+        {/* Certifications Block */}
+        <div className="bg-slate-50 p-8 rounded-xl shadow-lg border border-gray-100">
+          <div className="grid md:grid-cols-2 gap-x-8 gap-y-6">
+            {certificationsToShow.map((cert, index) => (
+              <div
+                key={index}
+                className="group flex items-center p-2 rounded-lg hover:bg-slate-100 transition-all duration-300 hover:scale-105"
+              >
+                <div className="w-10 h-10 mr-4 flex-shrink-0">
+                  {cert.logo.startsWith('/') ? (
+                    <img src={cert.logo} alt={`${cert.issuer} logo`} className="w-full h-full object-contain"/>
+                  ) : (
+                    <span className="text-3xl">{cert.logo}</span>
+                  )}
+                </div>
                 <div>
-                  <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">
+                  <h3 className="font-semibold text-gray-800 group-hover:text-blue-600">
                     {cert.title}
                   </h3>
-                  <p className="text-gray-600 font-semibold mt-1">{cert.issuer}</p>
-                  <p className="text-gray-500 mt-2">{cert.date}</p>
+                  <p className="text-sm text-gray-500">{cert.issuer} • {cert.date}</p>
                 </div>
               </div>
-            </a>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        {/* CTA Section */}
-        <div className="text-center mt-16">
-          <button
-            onClick={toggleCertifications}
-            className="bg-blue-600 text-white px-8 py-4 rounded-lg hover:bg-blue-700 transition-all duration-300 hover:scale-105 font-medium text-lg"
-          >
-            {isExpanded ? 'Show Less' : 'Show More Certifications'}
-          </button>
+          {certifications.length > 6 && (
+            <div className="text-center mt-8">
+              <button
+                onClick={toggleCertifications}
+                className="bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors font-medium border border-gray-200"
+              >
+                {isExpanded ? 'Show Less' : 'Show More'}
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </section>

@@ -13,7 +13,7 @@ export default function ProjectsSection() {
   const allProjects = [
     {
       title: "Workabn Website (currently offline)",
-      description: "Modern e-commerce solution with React, Node.js, and Stripe integration.",
+      description: "Workabn is a website providing services helping customers start their jobs using ABN, and it helps them to get their work with children checks and other basic qualifications. This is a side project fully developed by me, it included a landing page, forms for customers to  provide their information and a payment system powered by Stripe.",
       image: "/projects/project 1_1.png",
       tags: ["PHP", "JavaScript", "Bootstrap", "MySQL", "Stripe Payment"],
       detailedDescription: "Workabn is a website providing services helping customers start their jobs using ABN, and it helps them to get their work with children checks and other basic qualifications. This is a side project fully developed by me, it included a landing page, forms for customers to  provide their information and a payment system powered by Stripe.",
@@ -27,10 +27,10 @@ export default function ProjectsSection() {
     },
     {
       title: "Non-profit Corelia Website",
-      description: "It has been a long time since people forgot the female composer’s contribution to classical music, while many of the pieces created by female composers are out there. The Corelia project aims to collect those pieces with information like composer information, recording of the piece, musical score ( if applicable), etc. Those data collected will be used to promote women composers and their works, and encourage musicians and concerts to diversify their choice of repertoire. To achieve this purpose, the Corelia project wished to build a website that served as a centralised database for classical music players to discover women composers’ works. Apart from the database, the Corelia project also wishes to provide a forum for its users to communicate with each other, including commenting, posting, sharing and collecting a post. My responsibilities included design and development of homepages, profile page, repertoire page and community function, mainly on front end and API, database and backend were handled by other team members.",
+      description: "It has been a long time since people forgot the female composer's contribution to classical music, while many of the pieces created by female composers are out there. The Corelia project aims to collect those pieces with information like composer information, recording of the piece, musical score ( if applicable), etc. Those data collected will be used to promote women composers and their works, and encourage musicians and concerts to diversify their choice of repertoire. To achieve this purpose, the Corelia project wished to build a website that served as a centralised database for classical music players to discover women composers' works. Apart from the database, the Corelia project also wishes to provide a forum for its users to communicate with each other, including commenting, posting, sharing and collecting a post. My responsibilities included design and development of homepages, profile page, repertoire page and community function, mainly on front end and API, database and backend were handled by other team members.",
       image: "/projects/project 2_1.png",
       tags: ["MERN Stack", "Figma", "Restful API", "AWS S3"],
-      detailedDescription: "A powerful task management tool designed for teams. It features real-time collaboration, allowing users to see updates instantly. The drag-and-drop interface makes organizing tasks simple and intuitive, boosting productivity for any team.",
+      detailedDescription: "It has been a long time since people forgot the female composer's contribution to classical music, while many of the pieces created by female composers are out there. The Corelia project aims to collect those pieces with information like composer information, recording of the piece, musical score ( if applicable), etc. Those data collected will be used to promote women composers and their works, and encourage musicians and concerts to diversify their choice of repertoire. To achieve this purpose, the Corelia project wished to build a website that served as a centralised database for classical music players to discover women composers' works. Apart from the database, the Corelia project also wishes to provide a forum for its users to communicate with each other, including commenting, posting, sharing and collecting a post. My responsibilities included design and development of homepages, profile page, repertoire page and community function, mainly on front end and API, database and backend were handled by other team members.",
       images: [
         { src: "/projects/project 2_1.png", description: "Corelia Homepage, Profile page and repertoire page" },
         { src: "/projects/project 2_2.png", description: "Corelia contact page, community page, topic page" },
@@ -39,10 +39,10 @@ export default function ProjectsSection() {
     },
     {
       title: "City Council Asset Management System",
-      description: "This project was built for a local city council responsible for maintaining public assets such as footpaths and rubbish bins. Previously, residents had to report issues via phone or email, which made it hard to track progress, caused delays, and often led to repeated or unclear reports. To improve the process, we developed a digital solution that streamlines issue reporting, reduces administrative overhead, and helps staff respond more efficiently. I contributed by designing the app’s logic, creating the report submission forms, and integrating Google’s location services to ensure accurate issue tracking.",
+      description: "This project was built for a local city council responsible for maintaining public assets such as footpaths and rubbish bins. Previously, residents had to report issues via phone or email, which made it hard to track progress, caused delays, and often led to repeated or unclear reports. To improve the process, we developed a digital solution that streamlines issue reporting, reduces administrative overhead, and helps staff respond more efficiently. I contributed by designing the app's logic, creating the report submission forms, and integrating Google's location services to ensure accurate issue tracking.",
       image: "/projects/project 3_1.png",
       tags: ["Android Development", "Java", "Firebase", "Google Maps API"],
-      detailedDescription: "This dashboard provides deep insights into data through a highly interactive and customizable interface. Using D3.js, it renders complex data into beautiful and understandable visualizations, helping businesses make data-driven decisions.",
+      detailedDescription: "This project was built for a local city council responsible for maintaining public assets such as footpaths and rubbish bins. Previously, residents had to report issues via phone or email, which made it hard to track progress, caused delays, and often led to repeated or unclear reports. To improve the process, we developed a digital solution that streamlines issue reporting, reduces administrative overhead, and helps staff respond more efficiently. I contributed by designing the app's logic, creating the report submission forms, and integrating Google's location services to ensure accurate issue tracking.",
       images: [
         { src: "/projects/project 3_1.png", description: "Login & register pages" },
         { src: "/projects/project 3_2.png", description: "Report pages" },
@@ -52,10 +52,10 @@ export default function ProjectsSection() {
     },
     {
       title: "Custom Deep learning model for wound monitoring",
-      description: "This project focuses on building a solution to help identify the borders and colours of a patient’s wound from images. It's still in the early stages, so the client is open to any practical approach. Wound images are captured using screenshots on the client’s computer, each including a reference object—like a two-dollar coin—for scale. The goal is to clearly detect the wound's border, extract it, and use it with the reference object to estimate the wound's actual size. The client also wants to break down the wound’s colour into distinct areas and track how those colours change over time by comparing images. The solution is currently planned as a web application. I was responsible for researching possible approaches, designing the TensorFlow-based deep learning model, preparing and processing the data, training the model using a custom U-Net setup, and testing it with new datasets. This included collecting training images, creating masks, loading and segmenting data, validating results, and adjusting various parameters during the training process, which was one of the most time-intensive parts.",
+      description: "This project focuses on building a solution to help identify the borders and colours of a patient's wound from images. It's still in the early stages, so the client is open to any practical approach. Wound images are captured using screenshots on the client's computer, each including a reference object—like a two-dollar coin—for scale. The goal is to clearly detect the wound's border, extract it, and use it with the reference object to estimate the wound's actual size. The client also wants to break down the wound's colour into distinct areas and track how those colours change over time by comparing images. The solution is currently planned as a web application. I was responsible for researching possible approaches, designing the TensorFlow-based deep learning model, preparing and processing the data, training the model using a custom U-Net setup, and testing it with new datasets. This included collecting training images, creating masks, loading and segmenting data, validating results, and adjusting various parameters during the training process, which was one of the most time-intensive parts.",
       image: "/projects/project 4_1.png",
       tags: ["Deep Learning", "Python", "JavaScript", "TensorFlow", "U-Net", "Model Training"],
-      detailedDescription: "A full-fledged social media app allowing users to share photos, follow other users, and engage in real-time chat conversations. Built with React Native for a seamless cross-platform experience and Firebase for backend services.",
+      detailedDescription: "This project focuses on building a solution to help identify the borders and colours of a patient's wound from images. It's still in the early stages, so the client is open to any practical approach. Wound images are captured using screenshots on the client's computer, each including a reference object—like a two-dollar coin—for scale. The goal is to clearly detect the wound's border, extract it, and use it with the reference object to estimate the wound's actual size. The client also wants to break down the wound's colour into distinct areas and track how those colours change over time by comparing images. The solution is currently planned as a web application. I was responsible for researching possible approaches, designing the TensorFlow-based deep learning model, preparing and processing the data, training the model using a custom U-Net setup, and testing it with new datasets. This included collecting training images, creating masks, loading and segmenting data, validating results, and adjusting various parameters during the training process, which was one of the most time-intensive parts.",
       images: [
         { src: "/projects/project 4_1.png", description: "Circle out wound areas in training images" },
         { src: "/projects/project 4_2.png", description: "Deep learning algorithms turn cycle-out areas into black & white" },
@@ -68,7 +68,7 @@ export default function ProjectsSection() {
         description: "This project was part of my internship at ITConnexion, developed for GECC, a non-profit childcare centre. They needed a system to help manage their daycare availability, which included both a mobile app and an internal website. I worked on analysing requirements, designing the frontend, meeting with the client to discuss ideas and feedback, and planning the overall workflow to make sure everything fit their day-to-day operations.",
         image: "/projects/project 5_4.png",
         tags: ["Figma", "React.js", "PHP", "MySQL", "Restful API"],
-        detailedDescription: "A recipe finder application that helps users discover new dishes based on ingredients they have. It uses the Edamam API to fetch recipes and allows users to save their favorites for later.",
+        detailedDescription: "This project was part of my internship at ITConnexion, developed for GECC, a non-profit childcare centre. They needed a system to help manage their daycare availability, which included both a mobile app and an internal website. I worked on analysing requirements, designing the frontend, meeting with the client to discuss ideas and feedback, and planning the overall workflow to make sure everything fit their day-to-day operations.",
         images: [
             { src: "/projects/project 5_1.png", description: "Childcare centre app part 1" },
             { src: "/projects/project 5_2.png", description: "Childcare centre app part 2" },
@@ -79,10 +79,10 @@ export default function ProjectsSection() {
     },
     {
         title: "MarkMyWords product",
-        description: "This landing page was designed for a startup called MarkMyWords, which was building a tool to help high school teachers visualise student performance and offer tailored suggestions. The page serves to promote the tool, explain its features, and provide access to the subscription payment gateway. I was responsible for developing part of the tool’s visualisation function , and prototyping and building the UI for the entire website.",
+        description: "This landing page was designed for a startup called MarkMyWords, which was building a tool to help high school teachers visualise student performance and offer tailored suggestions. The page serves to promote the tool, explain its features, and provide access to the subscription payment gateway. I was responsible for developing part of the tool's visualisation function , and prototyping and building the UI for the entire website.",
         image: "/projects/project 6_1.png",
         tags: ["TypeScript", "Next.js", "Tailwind CSS", "PostgreSQL", "GraphQL", "Figma"],
-        detailedDescription: "Detailed description for another great project, showcasing different skills and technologies.",
+        detailedDescription: "This landing page was designed for a startup called MarkMyWords, which was building a tool to help high school teachers visualise student performance and offer tailored suggestions. The page serves to promote the tool, explain its features, and provide access to the subscription payment gateway. I was responsible for developing part of the tool's visualisation function , and prototyping and building the UI for the entire website.",
         images: [
             { src: "/projects/project 6_1.png", description: "Landing page design" },
             { src: "/projects/project 6_2.png", description: "Overall data visualisation in homepage" },
@@ -91,10 +91,10 @@ export default function ProjectsSection() {
     },
     {
       title: "Motorcycle Safety Project",
-      description: "This landing page was designed for a startup called MarkMyWords, which was building a tool to help high school teachers visualise student performance and offer tailored suggestions. The page serves to promote the tool, explain its features, and provide access to the subscription payment gateway. I was responsible for developing part of the tool’s visualisation function , and prototyping and building the UI for the entire website.",
+      description: "Pioneered a safety-critical Android application for the Queensland Department of Transport & Main Roads, processing real-time motorcycle data to deliver life-saving warnings. Played a key role in hardware integration, data monitoring, and cross-functional team collaboration to ensure project success.",
       image: "/projects/project 7_11.png",
       tags: ["Android Development", "Python", "Java", "Hardware"],
-      detailedDescription: "Detailed description for another great project, showcasing different skills and technologies.",
+      detailedDescription: "Pioneered a safety-critical Android application for the Queensland Department of Transport & Main Roads, processing real-time motorcycle data to deliver life-saving warnings. Played a key role in hardware integration, data monitoring, and cross-functional team collaboration to ensure project success.",
       images: [
           { src: "/projects/project 7_1.png", description: "test vehicles in garage" },
           { src: "/projects/project 7_2.png", description: "communication between team members" },
@@ -114,11 +114,11 @@ export default function ProjectsSection() {
       ]
     },
     {
-      title: "MarkMyWords product",
-      description: "This landing page was designed for a startup called MarkMyWords, which was building a tool to help high school teachers visualise student performance and offer tailored suggestions. The page serves to promote the tool, explain its features, and provide access to the subscription payment gateway. I was responsible for developing part of the tool’s visualisation function , and prototyping and building the UI for the entire website.",
+      title: "Scouts Victoria Internal Website",
+      description: "The internal website supports the activities of Scouts Victoria, including event management, member management, and resource management. I was responsible for maintaining and developing the website, including adding new features and fixing bugs.",
       image: "/projects/project 8_3.png",
       tags: ["PHP", "MySQL", "Zend Framework", "SVN", "Git"],
-      detailedDescription: "Detailed description for another great project, showcasing different skills and technologies.",
+      detailedDescription: "The internal website supports the activities of Scouts Victoria, including event management, member management, and resource management. I was responsible for maintaining and developing the website, including adding new features and fixing bugs.",
       images: [
           { src: "/projects/project 8_1.png", description: "Landing page design" },
           { src: "/projects/project 8_2.png", description: "Overall data visualisation in homepage" },
