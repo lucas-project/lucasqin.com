@@ -17,7 +17,7 @@ const profile = {
 };
 
 function createDigitalExperience(profile) {
-  if (profile.isSeekingWork) {
+  if (profile.isSeekingSoftwareDevelopmentWork) {
     return "Let's build something great together!";
   }
 }`;
